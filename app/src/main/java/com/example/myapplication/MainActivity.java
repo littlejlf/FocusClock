@@ -11,6 +11,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.graphics.Paint;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 //    private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
     private long mTimeLeftInMillis=30*60000;     //默认一开始的时间是30分钟
     private long tempTime;      //记录当时选择的学习时长
+    private TextView myname;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
@@ -62,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
          mBar= (SeekBar) findViewById(R.id.seekBar_time);
         mTxt = (TextView) findViewById(R.id.textView4);
         MusicImage=(ImageView)findViewById(R.id.listen);
+        myname=(TextView)findViewById(R.id.ttt);
+        myname.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
         bindViews();    //动态显示进度条函数
         upDataStudyTime();
 
@@ -228,6 +232,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         stopMyService();   //最新改变
+                        stopMusicService();
                         mBar.setEnabled(true);
                         mTextViewCountDown.setText(tempTime/60000+":00");
                         mTimeLeftInMillis=tempTime;
