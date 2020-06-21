@@ -15,7 +15,10 @@
     ![add image](https://github.com/cloudmusiccc/FocusClock/raw/master/showImage/nice.png)
 ## 运行环境*
 
-**安卓实体机：android 9及以下**
+**安卓实体机：android 9及以下**：
+
+链接：https://pan.baidu.com/s/1daA72cjbPw3OC2Vg1kA_sQ 
+提取码：afe2
 
 **安卓虚拟机：android 10.0 (Q)及以下**：
 
