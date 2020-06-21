@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="textview">TextView</string>
+    <string name="button">Button</string>
+    <string name="_00_00">00:00</string>
+    <string name="sta">开始</string>
+    <string name="reset">重置</string>
+    <string name="fangqi">放弃</string>
+    <string name="啊">开始</string>
+    <string name="hh">选择时长</string>
+    <string name="_30_00">30:00</string>
+    <string name="shicha">选择时长为:</string>
+    <string name="string_shicha">选择时长为30:00</string>
+    <string name="mtStudyTime">你已经学习的时间为：</string>
+    <string name="button2">Button</string>
+    <string name="bb">不要过来</string>
+    <string name="todo">todo</string>
+    <string name="k">开始</string>
+</resources>

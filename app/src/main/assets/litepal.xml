@@ -1,0 +1,7 @@
+<litepal>
+    <dbname value="studyData"/>
+    <version value="1"/>
+    <list>
+        <mapping class="com.example.myapplication.StudyTime"/>
+    </list>
+</litepal>
