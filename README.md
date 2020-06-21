@@ -12,7 +12,7 @@
 
 * **可通过back键返回而不会导致计时中断（Actiivty销毁），计时期间允许访问本app其他activity而音乐和计时功能正常进行。**
 
-    ![add image](https://github.com/cloudmusiccc/TimeMaster/raw/master/showImage/nice.png)
+    ![add image](https://github.com/cloudmusiccc/FocusClock/raw/master/showImage/nice.png)
 ## 运行环境*
 
 **安卓实体机：android 9及以下**
@@ -47,7 +47,7 @@ implementation 'org.litepal.android:core:1.4.1'
 
 **这意味着在Android 10的运行环境下本app将无法强制将用户拉回 ！**
 
-  ![add image](https://github.com/cloudmusiccc/TimeMaster/raw/master/showImage/change.png)
+  ![add image](https://github.com/cloudmusiccc/FocusClock/raw/master/showImage/change.png)
 
 
 
@@ -58,7 +58,7 @@ implementation 'org.litepal.android:core:1.4.1'
 
 ## 设计流程：
 
-  ![add image](https://github.com/cloudmusiccc/TimeMaster/raw/master/showImage/flow.png)
+  ![add image](https://github.com/cloudmusiccc/FocusClock/raw/master/showImage/flow.png)
 
 ## 各方法介绍：
 
