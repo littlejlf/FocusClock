@@ -26,12 +26,14 @@
 
 ## 部署运行
 
-##### **可通过APK下载链接进行下载**
+> * **可通过APK下载链接进行下载**
 
 链接：https://pan.baidu.com/s/1JrN4BDu7F5YR-yulFwQdRg 
 提取码：lbq2
 
-**也可通过下载源码在Android Studio中使用虚拟机运行**
+
+
+> * **也可通过下载源码在Android Studio中使用虚拟机运行**
 
 ```
 $git clone git@github.com:cloudmusiccc/FocusClock.git
