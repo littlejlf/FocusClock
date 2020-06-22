@@ -20,11 +20,9 @@
 
 ## 部分效果展示
 
-![add image](https://github.com/cloudmusiccc/FocusClock/raw/master/showImages/pull.png)
+  ![add image](https://github.com/cloudmusiccc/FocusClock/raw/master/showImage/pull.png)
 
-![add image](https://github.com/cloudmusiccc/FocusClock/raw/master/showImages/giveup.jpg)
-
-
+ 
 
 ## 部署运行
 
