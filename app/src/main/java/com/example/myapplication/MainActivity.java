@@ -15,6 +15,7 @@ import android.graphics.Paint;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.provider.ContactsContract;
 import android.provider.Settings;
 import android.view.KeyEvent;
 import android.view.View;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     private SeekBar mBar;                      //进度条
     private TextView mTxt;                      //进度条下方文本
     private ImageView MusicImage;   //音乐播放器
+    private Button recordButton;  //查看记录
+    private int giveUpNum=0;  //放弃次数
 
     private CountDownTimer mCountDownTimer;  //剩余时间计时器
 
@@ -55,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
 
         if(DataSupport.findFirst(StudyTime.class)==null) {//如果该数据库没有元素就新建一个，初始的学习时间为0分钟
         StudyTime a = new StudyTime();
-        a.setTotalTime(0);
+        a.setTotalTime(0);  //设置初始学习时间为0
+        a.setGiveUpNum(0);   //设置放弃次数为0
         a.save();
         }
         setContentView(R.layout.activity_main);
@@ -65,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         mTxt = (TextView) findViewById(R.id.textView4);
         MusicImage=(ImageView)findViewById(R.id.listen);
         myname=(TextView)findViewById(R.id.ttt);
+        recordButton=(Button)findViewById(R.id.getRecord);
         myname.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
         bindViews();    //动态显示进度条函数
         upDataStudyTime();
@@ -82,6 +87,13 @@ public class MainActivity extends AppCompatActivity {
                     stopMusicService();
                 }
                 else startMusicService();
+            }
+        });
+        recordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,recordActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -291,6 +303,17 @@ public class MainActivity extends AppCompatActivity {
                 stopMyService();
                 stopAlarmMusicService();
                 stopMusicService();
+//                preClock=DataSupport.find(StudyTime.class,1);
+//                long preTime=preClock.getTotalTime();
+//                long total=preTime+tempTime/60000;
+//                myClock.setTotalTime(total);
+//                myClock.update(1);
+                StudyTime tempNum= DataSupport.find(StudyTime.class,1);
+                giveUpNum=tempNum.getGiveUpNum();
+                giveUpNum=giveUpNum+1;
+                tempNum.setGiveUpNum(giveUpNum);
+                tempNum.update(1);
+
 
 //                stopMyService();    //停止服务
 

@@ -68,15 +68,14 @@
 
     <ImageView
         android:id="@+id/listen"
-        android:layout_width="84dp"
-        android:layout_height="136dp"
+        android:layout_width="59dp"
+        android:layout_height="110dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
-        app:layout_constraintVertical_bias="0.056"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/lis" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -122,9 +121,36 @@
         android:textColor="#8BC34A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listen"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:layout_constraintVertical_bias="0.103" />
+
+    <Button
+        android:id="@+id/getRecord"
+        android:layout_width="59dp"
+        android:layout_height="29dp"
+        android:background="@drawable/bg_toast"
+        android:text="查看记录"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.583" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="476dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="529dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

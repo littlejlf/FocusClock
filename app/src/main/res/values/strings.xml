@@ -16,4 +16,6 @@
     <string name="bb">不要过来</string>
     <string name="todo">todo</string>
     <string name="k">开始</string>
+    <string name="returnMain">点我返回</string>
+    <string name="abandom">放弃的次数：0</string>
 </resources>

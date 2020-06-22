@@ -13,14 +13,31 @@
 * **可通过back键返回而不会导致计时中断（Actiivty销毁），计时期间允许访问本app其他activity而音乐和计时功能正常进行。**
 
     ![add image](https://github.com/cloudmusiccc/FocusClock/raw/master/showImage/nice.png)
-## 运行环境*
 
-**安卓实体机：android 9及以下**：
+**开发环境：Android Studio**
+
+
+
+## 部分效果展示
+
+![add image](https://github.com/cloudmusiccc/FocusClock/raw/master/showImages/pull.png)
+
+![add image](https://github.com/cloudmusiccc/FocusClock/raw/master/showImages/giveup.jpg)
+
+
+
+## 部署运行
+
+##### **可通过APK下载链接进行下载**
 
 链接：https://pan.baidu.com/s/1JrN4BDu7F5YR-yulFwQdRg 
 提取码：lbq2
 
-**安卓虚拟机：android 10.0 (Q)及以下**：
+**也可通过下载源码在Android Studio中使用虚拟机运行**
+
+```
+$git clone git@github.com:cloudmusiccc/FocusClock.git
+```
 
 确定build.gradle文件添加了依赖项
 
@@ -42,17 +59,17 @@ implementation 'org.litepal.android:core:1.4.1'
   android:launchMode="singleTask"
 ```
 
-**Android 10 为了减少app对于用户不必要的影响，对用户权限作了更为严格的限制，对于app从后台启动activity进行了更高级别的限制，因此本项目通过Service启动Activity的功能在Android 10版本下失效。**
 
-**这意味着在Android 10的运行环境下本app将无法强制将用户拉回 ！**
 
-**这意味着在Android 10的运行环境下本app将无法强制将用户拉回 ！**
+### 注意事项
 
-**这意味着在Android 10的运行环境下本app将无法强制将用户拉回 ！**
+> * **Android 10 为了减少app对于用户不必要的影响，对用户权限作了更为严格的限制，对于app从后台启动activity进行了更高级别的限制，因此本项目通过Service启动Activity的功能在Android 10版本下失效。**
+
+> * **Android 9 及以下环境功能正常运行**
+
+> * **Android 10 环境下专注时钟强制将用户拉回功能失效，代之以弹窗提醒**
 
   ![add image](https://github.com/cloudmusiccc/FocusClock/raw/master/showImage/change.png)
-
-
 
 
 **有关文档如下：**https://developer.android.com/guide/components/activities/background-starts
@@ -62,6 +79,8 @@ implementation 'org.litepal.android:core:1.4.1'
 ## 设计流程：
 
   ![add image](https://github.com/cloudmusiccc/FocusClock/raw/master/showImage/flow.png)
+
+
 
 ## 各方法介绍：
 

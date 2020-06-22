@@ -6,8 +6,7 @@
     <uses-permission
         android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
-    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
-
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
 
     <application
         android:name="org.litepal.LitePalApplication"
@@ -17,10 +16,15 @@
         android:roundIcon="@mipmap/concon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".recordActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+        </activity>
+
         <service
             android:name=".MusicService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
         <service
             android:name=".AlarmMusicService"
             android:enabled="true"
@@ -36,6 +40,7 @@
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
